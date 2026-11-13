@@ -1,0 +1,14 @@
+{
+  "name": "unsponsored",
+  "description": "Purchase research that weighs every source by who pays it.",
+  "owner": {
+    "name": "Vasilii"
+  },
+  "plugins": [
+    {
+      "name": "unsponsored",
+      "source": "./plugins/unsponsored",
+      "description": "Purchase research that weighs every source by who pays it: independent tests and recall databases first, affiliate rankings and brand marketing last."
+    }
+  ]
+}

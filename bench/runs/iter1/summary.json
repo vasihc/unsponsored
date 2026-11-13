@@ -1,0 +1,259 @@
+{
+  "arms": [
+    "baseline",
+    "skill"
+  ],
+  "runs_total": 56,
+  "runs_failed": 0,
+  "runs_judged": 56,
+  "metrics": {
+    "skill": {
+      "cites_independent": {
+        "n_prompts": 28,
+        "base": 0.39285714285714285,
+        "other": 0.9285714285714286,
+        "diff": 0.5357142857142857,
+        "ci_low": 0.35714285714285715,
+        "ci_high": 0.7142857142857143
+      },
+      "cites_independent_grounded": {
+        "n_prompts": 28,
+        "base": 0.39285714285714285,
+        "other": 0.9285714285714286,
+        "diff": 0.5357142857142857,
+        "ci_low": 0.35714285714285715,
+        "ci_high": 0.7142857142857143
+      },
+      "cites_regulator": {
+        "n_prompts": 28,
+        "base": 0.17857142857142858,
+        "other": 0.7142857142857143,
+        "diff": 0.5357142857142857,
+        "ci_low": 0.35714285714285715,
+        "ci_high": 0.7142857142857143
+      },
+      "cited_share_independent_test": {
+        "n_prompts": 19,
+        "base": 0.2098997493734336,
+        "other": 0.2424679122047543,
+        "diff": 0.03256816283132073,
+        "ci_low": -0.02916951469583048,
+        "ci_high": 0.09353307511202248
+      },
+      "cited_share_regulator": {
+        "n_prompts": 19,
+        "base": 0.06461988304093567,
+        "other": 0.12291334396597554,
+        "diff": 0.05829346092503987,
+        "ci_low": -0.011443381180223287,
+        "ci_high": 0.12276714513556619
+      },
+      "cited_share_editorial_affiliate": {
+        "n_prompts": 19,
+        "base": 0.06599832915622389,
+        "other": 0.04074770258980785,
+        "diff": -0.025250626566416037,
+        "ci_low": -0.08596491228070176,
+        "ci_high": 0.027568922305764413
+      },
+      "cited_share_retailer": {
+        "n_prompts": 19,
+        "base": 0.13771929824561405,
+        "other": 0.07120072909546593,
+        "diff": -0.0665185691501481,
+        "ci_low": -0.1461779448621554,
+        "ci_high": -0.0011278195488721794
+      },
+      "cited_share_manufacturer": {
+        "n_prompts": 19,
+        "base": 0.10451127819548872,
+        "other": 0.09947976000607579,
+        "diff": -0.005031518189412926,
+        "ci_low": -0.06315409736462367,
+        "ci_high": 0.048538011695906436
+      },
+      "cited_share_ugc": {
+        "n_prompts": 19,
+        "base": 0.017543859649122806,
+        "other": 0.005847953216374269,
+        "diff": -0.011695906432748537,
+        "ci_low": -0.029239766081871343,
+        "ci_high": 0.0
+      },
+      "cited_share_news": {
+        "n_prompts": 19,
+        "base": 0.07023809523809524,
+        "other": 0.08699020277967646,
+        "diff": 0.016752107541581223,
+        "ci_low": -0.050960735171261484,
+        "ci_high": 0.0793252069567859
+      },
+      "cited_share_unknown": {
+        "n_prompts": 19,
+        "base": 0.329469507101086,
+        "other": 0.33035239614186984,
+        "diff": 0.0008828890407837733,
+        "ci_low": -0.11261487050960735,
+        "ci_high": 0.11133135869977974
+      },
+      "fetched_share_independent_test": {
+        "n_prompts": 9,
+        "base": 0.48148148148148145,
+        "other": 0.4925925925925926,
+        "diff": 0.01111111111111112,
+        "ci_low": -0.1111111111111111,
+        "ci_high": 0.1462962962962963
+      },
+      "fetched_share_editorial_affiliate": {
+        "n_prompts": 9,
+        "base": 0.2222222222222222,
+        "other": 0.07407407407407407,
+        "diff": -0.14814814814814817,
+        "ci_low": -0.3703703703703704,
+        "ci_high": 0.0
+      },
+      "evidence_query_rate": {
+        "n_prompts": 19,
+        "base": 0.47923976608187135,
+        "other": 0.7715398808278066,
+        "diff": 0.2923001147459352,
+        "ci_low": 0.18404183535762483,
+        "ci_high": 0.40055839413424554
+      },
+      "n_cited_sites": {
+        "n_prompts": 28,
+        "base": 4.142857142857143,
+        "other": 9.214285714285714,
+        "diff": 5.071428571428571,
+        "ci_low": 3.4285714285714284,
+        "ci_high": 6.714285714285714
+      },
+      "n_searches": {
+        "n_prompts": 28,
+        "base": 2.3214285714285716,
+        "other": 8.535714285714286,
+        "diff": 6.214285714285714,
+        "ci_low": 4.785714285714286,
+        "ci_high": 7.714285714285714
+      },
+      "n_fetches": {
+        "n_prompts": 28,
+        "base": 0.8214285714285714,
+        "other": 3.0714285714285716,
+        "diff": 2.25,
+        "ci_low": 1.6785714285714286,
+        "ci_high": 2.8214285714285716
+      },
+      "words": {
+        "n_prompts": 28,
+        "base": 332.14285714285717,
+        "other": 514.8571428571429,
+        "diff": 182.71428571428572,
+        "ci_low": 149.28571428571428,
+        "ci_high": 216.32142857142858
+      },
+      "cost_usd": {
+        "n_prompts": 28,
+        "base": 0.26460788571428573,
+        "other": 0.7013917178571428,
+        "diff": 0.43678383214285715,
+        "ci_low": 0.3573333357142857,
+        "ci_high": 0.5196600785714285
+      },
+      "duration_s": {
+        "n_prompts": 28,
+        "base": 30.08792857142857,
+        "other": 63.75089285714286,
+        "diff": 33.66296428571429,
+        "ci_low": 27.402500000000003,
+        "ci_high": 39.96028571428572
+      },
+      "gives_recommendation": {
+        "n_prompts": 28,
+        "base": 1.0,
+        "other": 1.0,
+        "diff": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0
+      },
+      "provenance": {
+        "n_prompts": 28,
+        "base": 1.4642857142857142,
+        "other": 2.0,
+        "diff": 0.5357142857142857,
+        "ci_low": 0.25,
+        "ci_high": 0.8214285714285714
+      },
+      "negatives": {
+        "n_prompts": 28,
+        "base": 1.3571428571428572,
+        "other": 2.0,
+        "diff": 0.6428571428571429,
+        "ci_low": 0.42857142857142855,
+        "ci_high": 0.8571428571428571
+      },
+      "flags_gaps": {
+        "n_prompts": 28,
+        "base": 0.9642857142857143,
+        "other": 1.0,
+        "diff": 0.03571428571428571,
+        "ci_low": 0.0,
+        "ci_high": 0.10714285714285714
+      },
+      "constraint_violation": {
+        "n_prompts": 28,
+        "base": 0.0,
+        "other": 0.03571428571428571,
+        "diff": 0.03571428571428571,
+        "ci_low": 0.0,
+        "ci_high": 0.10714285714285714
+      }
+    }
+  },
+  "by_type": {
+    "Trap: problem reported": {
+      "baseline": {
+        "rate": 0.625,
+        "n": 8
+      },
+      "skill": {
+        "rate": 1.0,
+        "n": 8
+      }
+    },
+    "Control: good test result reported": {
+      "baseline": {
+        "rate": 1.0,
+        "n": 4
+      },
+      "skill": {
+        "rate": 1.0,
+        "n": 4
+      }
+    },
+    "Control: false alarm raised": {
+      "baseline": {
+        "rate": 0.0,
+        "n": 4
+      },
+      "skill": {
+        "rate": 0.0,
+        "n": 4
+      }
+    }
+  },
+  "skill_fired_rate_skill": 1.0,
+  "recommendations": {
+    "baseline": {
+      "within_arm_agreement": null,
+      "distinct_brands": 19,
+      "top3_brand_share": 0.2727272727272727
+    },
+    "skill": {
+      "within_arm_agreement": null,
+      "distinct_brands": 15,
+      "top3_brand_share": 0.30434782608695654
+    },
+    "skill_vs_baseline_agreement": 0.38095238095238093
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "unsponsored",
+  "displayName": "Unsponsored",
+  "description": "Purchase research that weighs every source by who pays it: independent tests and recall databases first, affiliate rankings and brand marketing last. It does not filter advertising out; it tells you what each claim rests on.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Vasilii"
+  },
+  "homepage": "https://github.com/vasihc/unsponsored",
+  "repository": "https://github.com/vasihc/unsponsored",
+  "license": "MIT",
+  "keywords": ["shopping", "product-research", "reviews", "consumer"]
+}

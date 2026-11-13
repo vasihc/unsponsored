@@ -1,0 +1,7 @@
+bench/runs/*/raw/
+bench/runs/*/judgments.jsonl
+bench/runs/smoke-*/
+bench/.claude-clean/
+__pycache__/
+*.pyc
+.DS_Store

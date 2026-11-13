@@ -1,0 +1,210 @@
+domain,category,confidence,note
+test.de,independent_test,high,Stiftung Warentest
+adac.de,independent_test,high,ADAC child seat tests
+oeamtc.at,independent_test,high,ADAC test partner
+tcs.ch,independent_test,high,ADAC test partner
+which.co.uk,independent_test,high,Which?
+consumerreports.org,independent_test,high,Consumer Reports
+consumentenbond.nl,independent_test,high,Consumentenbond
+test-achats.be,independent_test,high,Test-Achats
+test-aankoop.be,independent_test,high,Test-Aankoop
+quechoisir.org,independent_test,high,UFC-Que Choisir
+ocu.org,independent_test,high,OCU
+altroconsumo.it,independent_test,high,Altroconsumo
+deco.proteste.pt,independent_test,high,DECO Proteste
+choice.com.au,independent_test,high,Choice
+taenk.dk,independent_test,high,Forbrugerraadet Taenk
+radron.se,independent_test,high,Rad & Ron
+konsument.at,independent_test,high,VKI Konsument
+iihs.org,independent_test,high,IIHS booster ratings
+ntf.se,independent_test,medium,Swedish Plus Test information
+cpsc.gov,regulator,high,US product recalls
+saferproducts.gov,regulator,high,US complaint database
+nhtsa.gov,regulator,high,US car seat recalls and ease-of-use ratings
+ec.europa.eu,regulator,high,EU Safety Gate
+gov.uk,regulator,high,UK product safety alerts
+canada.ca,regulator,high,Health Canada recalls
+productsafety.gov.au,regulator,high,ACCC product safety
+fda.gov,regulator,high,US FDA
+kba.de,regulator,high,German Federal Motor Transport Authority
+healthychildren.org,regulator,high,American Academy of Pediatrics (professional body; grouped with regulators)
+aap.org,regulator,high,American Academy of Pediatrics
+nhs.uk,regulator,high,NHS guidance
+lullabytrust.org.uk,regulator,medium,Safe sleep charity (grouped with regulators)
+cdc.gov,regulator,high,US CDC
+safekids.org,regulator,medium,Safe Kids Worldwide nonprofit
+rospa.com,regulator,medium,UK safety charity
+nytimes.com/wirecutter,editorial_affiliate,high,Tests hands-on; earns affiliate commission
+babygearlab.com,editorial_affiliate,high,Buys and tests; earns affiliate commission
+thebump.com,editorial_affiliate,high,
+whattoexpect.com,editorial_affiliate,high,
+parents.com,editorial_affiliate,high,
+goodhousekeeping.com,editorial_affiliate,high,
+forbes.com,editorial_affiliate,high,Forbes Vetted
+cnn.com,editorial_affiliate,medium,CNN Underscored
+nymag.com,editorial_affiliate,high,The Strategist
+verywellfamily.com,editorial_affiliate,high,
+madeformums.com,editorial_affiliate,high,
+motherandbaby.com,editorial_affiliate,high,
+fatherly.com,editorial_affiliate,medium,
+lucieslist.com,editorial_affiliate,high,
+today.com,editorial_affiliate,medium,
+babycenter.com,editorial_affiliate,medium,Editorial plus community
+independent.co.uk,editorial_affiliate,medium,IndyBest
+businessinsider.com,editorial_affiliate,medium,
+reviewed.com,editorial_affiliate,high,
+usatoday.com,editorial_affiliate,medium,
+tomsguide.com,editorial_affiliate,high,
+techradar.com,editorial_affiliate,high,
+t3.com,editorial_affiliate,high,
+rtings.com,editorial_affiliate,medium,Buys and tests; affiliate links and subscriptions
+people.com,editorial_affiliate,medium,
+romper.com,editorial_affiliate,medium,
+mumsnet.com,ugc,medium,Forum plus affiliate-funded reviews
+netmums.com,ugc,medium,
+reddit.com,ugc,high,
+quora.com,ugc,high,
+facebook.com,ugc,high,
+youtube.com,ugc,medium,Mix of owners and sponsored creators
+tiktok.com,ugc,medium,
+instagram.com,ugc,medium,
+trustpilot.com,ugc,high,
+car-seat.org,ugc,medium,Enthusiast forum
+amazon.com,retailer,high,
+amazon.co.uk,retailer,high,
+amazon.de,retailer,high,
+amazon.nl,retailer,high,
+amazon.es,retailer,high,
+amazon.fr,retailer,high,
+amazon.it,retailer,high,
+target.com,retailer,high,
+walmart.com,retailer,high,
+babylist.com,retailer,high,Registry and retailer with editorial guides
+buybuybaby.com,retailer,high,
+nordstrom.com,retailer,high,
+albeebaby.com,retailer,high,
+potterybarnkids.com,retailer,high,
+johnlewis.com,retailer,high,
+argos.co.uk,retailer,high,
+boots.com,retailer,high,
+bol.com,retailer,high,
+babymarkt.de,retailer,high,
+baby-walz.de,retailer,high,
+otto.de,retailer,high,
+idealo.de,retailer,high,Price comparison
+pricerunner.com,retailer,medium,Price comparison
+ebay.com,retailer,high,
+aliexpress.com,retailer,high,
+temu.com,retailer,high,
+bugaboo.com,manufacturer,high,
+uppababy.com,manufacturer,high,
+cybex-online.com,manufacturer,high,
+nunababy.com,manufacturer,high,
+nuna.eu,manufacturer,high,
+britax.com,manufacturer,high,
+britax-roemer.de,manufacturer,high,
+britax-roemer.com,manufacturer,high,
+britax-roemer.co.uk,manufacturer,high,
+maxi-cosi.com,manufacturer,high,
+maxi-cosi.de,manufacturer,high,
+maxi-cosi.co.uk,manufacturer,high,
+maxi-cosi.nl,manufacturer,high,
+joiebaby.com,manufacturer,high,
+gracobaby.com,manufacturer,high,
+chiccousa.com,manufacturer,high,
+chicco.com,manufacturer,high,
+evenflo.com,manufacturer,high,
+babyjogger.com,manufacturer,high,
+thule.com,manufacturer,high,
+stokke.com,manufacturer,high,
+joolz.com,manufacturer,high,
+doona.com,manufacturer,high,
+silvercrossbaby.com,manufacturer,high,
+silvercrossus.com,manufacturer,high,
+babyzen.com,manufacturer,high,
+ergobaby.com,manufacturer,high,
+babybjorn.com,manufacturer,high,
+axkid.com,manufacturer,high,
+besafe.com,manufacturer,high,
+recaro-kids.com,manufacturer,high,
+diono.com,manufacturer,high,
+clekinc.com,manufacturer,high,
+hauck.de,manufacturer,high,
+kinderkraft.com,manufacturer,high,
+lionelo.com,manufacturer,high,
+pegperego.com,manufacturer,high,
+inglesina.com,manufacturer,high,
+mountainbuggy.com,manufacturer,high,
+bumbleride.com,manufacturer,high,
+bobgear.com,manufacturer,high,
+nanit.com,manufacturer,high,
+owletcare.com,manufacturer,high,
+infantoptics.com,manufacturer,high,
+eufy.com,manufacturer,high,
+babysense.com,manufacturer,medium,
+vtechphones.com,manufacturer,high,
+babybrezza.com,manufacturer,high,
+happiestbaby.com,manufacturer,high,
+halosleep.com,manufacturer,high,
+4moms.com,manufacturer,high,
+hatch.co,manufacturer,high,
+tommeetippee.com,manufacturer,high,
+philips.com,manufacturer,high,Philips Avent
+medela.com,manufacturer,high,
+spectrababyusa.com,manufacturer,high,
+elvie.com,manufacturer,high,
+frida.com,manufacturer,high,
+de.motor1.com,news,medium,Added after iteration 1; reports tests and recalls second-hand
+t-online.de,news,medium,Added after iteration 1; reports tests and recalls second-hand
+newstime.joyn.de,news,medium,Added after iteration 1; reports tests and recalls second-hand
+fox7austin.com,news,medium,Added after iteration 1; reports tests and recalls second-hand
+ktvu.com,news,medium,Added after iteration 1; reports tests and recalls second-hand
+volksstimme.de,news,medium,Added after iteration 1; reports tests and recalls second-hand
+fox29.com,news,medium,Added after iteration 1; reports tests and recalls second-hand
+fox5atlanta.com,news,medium,Added after iteration 1; reports tests and recalls second-hand
+yahoo.com,news,medium,Added after iteration 1; reports tests and recalls second-hand
+goodmorningamerica.com,news,medium,Added after iteration 1; reports tests and recalls second-hand
+heidelberg24.de,news,medium,Added after iteration 1; reports tests and recalls second-hand
+autohaus.de,news,medium,Added after iteration 1; reports tests and recalls second-hand
+echo24.de,news,medium,Added after iteration 1; reports tests and recalls second-hand
+fox10phoenix.com,news,medium,Added after iteration 1; reports tests and recalls second-hand
+qz.com,news,medium,Added after iteration 1; reports tests and recalls second-hand
+fox6now.com,news,medium,Added after iteration 1; reports tests and recalls second-hand
+nordkurier.de,news,medium,Added after iteration 1; reports tests and recalls second-hand
+fox2detroit.com,news,medium,Added after iteration 1; reports tests and recalls second-hand
+6abc.com,news,medium,Added after iteration 1; reports tests and recalls second-hand
+fox9.com,news,medium,Added after iteration 1; reports tests and recalls second-hand
+fox35orlando.com,news,medium,Added after iteration 1; reports tests and recalls second-hand
+fox13news.com,news,medium,Added after iteration 1; reports tests and recalls second-hand
+aol.com,news,medium,Added after iteration 1; reports tests and recalls second-hand
+ksat.com,news,medium,Added after iteration 1; reports tests and recalls second-hand
+schwaebische.de,news,medium,Added after iteration 1; reports tests and recalls second-hand
+foxbusiness.com,news,medium,Added after iteration 1; reports tests and recalls second-hand
+autozeitung.de,news,medium,Added after iteration 1; reports tests and recalls second-hand
+auto-medienportal.net,news,medium,Added after iteration 1; reports tests and recalls second-hand
+wftv.com,news,medium,Added after iteration 1; reports tests and recalls second-hand
+autoservicepraxis.de,news,medium,Added after iteration 1; reports tests and recalls second-hand
+galaxus.ch,retailer,medium,Added after iteration 1
+galaxus.at,retailer,medium,Added after iteration 1
+galaxus.de,retailer,medium,Added after iteration 1
+galaxus.fr,retailer,medium,Added after iteration 1
+galaxus.be,retailer,medium,Added after iteration 1
+ebay.de,retailer,medium,Added after iteration 1
+babyartikel.de,retailer,medium,Added after iteration 1
+strolleria.com,retailer,medium,Added after iteration 1
+bambibaby.com,retailer,medium,Added after iteration 1
+naturalbabyshower.co.uk,retailer,medium,Added after iteration 1
+babys-mart.co.uk,retailer,medium,Added after iteration 1
+anbbaby.com,retailer,medium,Added after iteration 1
+goodbuygear.com,retailer,medium,Added after iteration 1
+desertcart.pl,retailer,medium,Added after iteration 1
+kidslandusa.com,retailer,medium,Added after iteration 1
+mommyhood101.com,editorial_affiliate,medium,Added after iteration 1; not verified site by site
+testberichte.de,editorial_affiliate,medium,Added after iteration 1; not verified site by site
+testsieger.de,editorial_affiliate,medium,Added after iteration 1; not verified site by site
+familie.de,editorial_affiliate,medium,Added after iteration 1; not verified site by site
+mother.ly,editorial_affiliate,medium,Added after iteration 1; not verified site by site
+wunderweib.de,editorial_affiliate,medium,Added after iteration 1; not verified site by site
+pushchairexpert.com,editorial_affiliate,medium,Added after iteration 1; not verified site by site
+safeintheseat.com,editorial_affiliate,medium,Added after iteration 1; not verified site by site
+anwb.nl,independent_test,medium,Dutch motoring club; publishes the ADAC consortium child seat tests
