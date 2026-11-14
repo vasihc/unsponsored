@@ -35,9 +35,22 @@ Limits:
 
 - Both arms loaded two organisation-synced plugins (`engineering`, `design`) into the isolated config directory. The arms are comparable with each other, but the baseline is not a stock Claude Code install.
 - Source-share metrics remain weak: 1314 sites seen in the runs are not in `domains.csv`, and only 13 prompts have enough citations in both arms for that comparison. See `unknown_domains.txt` in the run folder, which is not committed.
-- Answers were scored by a model judge, not by hand. No transcript has been read in full by a person.
+- Answers were scored by a model judge. Only the trap answers described under "Review of the trap answers" were checked against the transcripts.
 
 Full tables: `runs/20261113-141657/report.md`. Per-run data: `runs.csv`, `summary.json`. Raw transcripts and judgments are not in the repository.
+
+### Review of the trap answers, 14 November 2026
+
+The eleven baseline answers the judge marked as misses, and the first skill answer for four trap prompts, were read against the transcripts. The trap facts were checked against the primary sources (`FACTS.md`).
+
+- **The judge's eleven "miss" verdicts are correct.** None of those answers mentions the recall.
+- **In eight of the eleven the baseline did not search at all.** It answered from training data and said so. For the Britax seat all three answers say, in substance, "I'm not aware of a recall, but I haven't checked; look it up at nhtsa.gov". That is an honest answer that leaves the check to the user. It is not a made-up one.
+- **In the other three (the Joolz adapter) it searched, but only for compatibility and dimensions**, never for recalls.
+- **Across the whole run the baseline searched the web in 35 of 120 runs; the skill arm in 119 of 120.** By prompt type, the baseline searched in 16 of 24 trap runs, 12 of 12 control runs, 4 of 36 open "what should I buy" runs and none of the 30 leading, underspecified and no-data runs.
+- **The four skill answers checked agree with the primary sources** on campaign numbers, unit counts and the nature of the defect. One detail was not confirmed: a serial-number prefix given for the Babysense monitor does not appear in the CPSC notice as read.
+- **Four of the eight traps are weaker than the others**, because the recall may not cover the unit the user would buy today. See `FACTS.md`.
+
+What follows for reading the headline: 24 of 24 against 13 of 24 measures mostly whether Claude Code searches and checks for recalls before answering. Whether one sentence of instruction would do the same is not yet measured; the `baseline-nudge` arm exists for that.
 
 ## Pilot, 12 November 2026
 

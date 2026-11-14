@@ -9,7 +9,7 @@ The benchmark does not try to prove that one recommended product is better than 
 ## Design
 
 - **Prompts**: 40 shopping questions about baby and child gear (`prompts.jsonl`), 18 set in Europe, 19 in the US, 3 with no country.
-- **Arms**: `baseline` (plain Claude Code) and `skill` (same, with the plugin loaded; Claude decides by itself whether to use the skill). An optional third arm, `skill-forced`, invokes the skill explicitly, which separates "does the skill trigger" from "does the skill help once it runs".
+- **Arms**: `baseline` (plain Claude Code) and `skill` (same, with the plugin loaded; Claude decides by itself whether to use the skill). Two optional arms: `baseline-nudge` is the baseline plus one sentence in the system prompt telling Claude to search the web and check for recalls first, which shows how much of the skill's effect a single instruction would buy; `skill-forced` invokes the skill explicitly, which separates "does the skill trigger" from "does the skill help once it runs".
 - **Repetitions**: 3 runs per prompt per arm by default, because answers and search results vary between runs.
 - **Order**: all runs are shuffled, so both arms are spread over the same period. Search results drift during a long run.
 - **Unit of analysis**: the prompt. Runs of a prompt are averaged first, then arms are compared prompt by prompt, with a bootstrap 95% interval over prompts.
@@ -75,7 +75,9 @@ Agreement on the top pick between arms is compared with agreement within an arm.
 
 - **One category, one language.** Baby gear, English prompts. Results say nothing about electronics or about questions asked in German.
 - **Controls are narrow.** All four are car seats from one ADAC test.
-- **Trap facts need re-checking before publication.** The two ADAC traps were read from adac.de and the Britax US recall from a news report citing NHTSA campaign 26C006. The other five were taken from a single Consumer Reports recall roundup on 12 November 2026 and should be confirmed on cpsc.gov or nhtsa.gov. Recalls have scope (production dates, part numbers); a correct answer may say the unit on sale today is unaffected.
+- **What "baseline" means here.** The baseline is Claude Code in headless mode with web tools available. In the full run it did not search the web at all in 85 of 120 runs and answered from training data, usually saying so. Most of the skill's measured effect is therefore "it makes Claude search and check for recalls". The results say nothing about assistants that search by default, such as a consumer chat app. Run the `baseline-nudge` arm to see how much a one-line instruction closes the gap.
+- **Organisation plugins.** A clean configuration directory does not remove plugins pushed by an organisation. In the full run two such plugins (`engineering`, `design`) were present in both arms. Each run's `.meta.json` lists them under `other_plugins`.
+- **Trap facts.** All eight were checked against the primary source (ADAC, NHTSA, CPSC) on 14 November 2026; see `FACTS.md`. Recalls have scope (production dates, part numbers), and for four of the eight prompts the recall may not apply to the exact unit the user would buy today. `FACTS.md` says which.
 - **`domains.csv` is a first draft.** Classifications come from general knowledge of each site's business model and were not verified site by site. `analyze.py` writes `unknown_domains.txt` after each run; a high unclassified share weakens the source metrics.
 - **The judge is not fully blind.** The skill prescribes an answer layout, which a judge can recognise. Transcript metrics and known-answer checks do not have this problem.
 - **The judge does not check facts.** An answer that invents a test result would score well on provenance. The "actually retrieved" metric catches part of this, not all.
@@ -85,7 +87,7 @@ Agreement on the top pick between arms is compared with agreement within an arm.
 
 ## Before publishing results
 
-1. Re-verify every trap and control fact against the primary source.
+1. Re-verify every trap and control fact against the primary source (done on 14 November 2026, see `FACTS.md`; repeat if prompts are added).
 2. Review `domains.csv` and classify the frequent entries in `unknown_domains.txt`.
 3. Read a sample of transcripts from both arms by hand, including failures.
 4. Report the cost-side metrics next to the quality ones.

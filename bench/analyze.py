@@ -31,6 +31,7 @@ EVIDENCE_QUERY = re.compile(
 
 # (key, label, kind) - kind decides formatting; all are per-run numbers or None.
 METRICS = [
+    ("searched_web", "Runs that searched the web at all", "pct"),
     ("cites_independent", "Answers citing an independent test body", "pct"),
     ("cites_independent_grounded", "...and that source was actually retrieved in the run", "pct"),
     ("cites_regulator", "Answers citing a regulator or recall database", "pct"),
@@ -92,6 +93,7 @@ def analyse_run(raw: Path, clf: DomainClassifier, skill_name: str) -> dict:
         "ok": bool(t["result"]) and not result.get("is_error") and bool(t["final_text"].strip()),
         "skill_fired": skill_fired(t, skill_name),
         "n_searches": len(queries), "n_fetches": len(fetched),
+        "searched_web": float(bool(queries or fetched)),
         "n_cited_sites": len(cited_sites),
         "cites_independent": float(bool(indep_cited)),
         "cites_independent_grounded": float(any(h in retrieved_hosts for h in indep_cited)),

@@ -28,7 +28,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import load_prompts, parse_transcript, run_stem, skill_fired  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
-ARMS = ("baseline", "skill", "skill-forced")
+ARMS = ("baseline", "baseline-nudge", "skill", "skill-forced")
+SKILL_ARMS = ("skill", "skill-forced")
+# One sentence a user could add themselves. Tests how much of the skill's effect is
+# simply "search first and check for recalls".
+NUDGE = ("Before answering a question about buying a product, search the web, and check "
+         "whether the product has been recalled or has failed an independent safety test.")
 BLOCKED_TOOLS = "Bash,Write,Edit,NotebookEdit,Agent"
 SYNC_VARS = ("CLAUDE_CODE_SYNC_SKILLS", "CLAUDE_CODE_SYNC_PLUGINS",
              "CLAUDE_CODE_CCR_EARLY_PLUGINS_SYNC", "CLAUDE_CODE_ENABLE_CFC")
@@ -39,7 +44,7 @@ def sha256(path: Path) -> str:
 
 
 def build_command(args, arm: str) -> list[str]:
-    allowed = "WebSearch,WebFetch" + ("" if arm == "baseline" else ",Skill")
+    allowed = "WebSearch,WebFetch" + (",Skill" if arm in SKILL_ARMS else "")
     cmd = [
         args.claude_bin, "-p",
         "--output-format", "stream-json", "--verbose",
@@ -51,8 +56,10 @@ def build_command(args, arm: str) -> list[str]:
     ]
     if args.no_chrome:
         cmd.append("--no-chrome")
-    if arm != "baseline":
+    if arm in SKILL_ARMS:
         cmd += ["--plugin-dir", str(args.plugin_dir)]
+    if arm == "baseline-nudge":
+        cmd += ["--append-system-prompt", NUDGE]
     if args.model:
         cmd += ["--model", args.model]
     return cmd
@@ -72,9 +79,13 @@ def check_setup(transcript: dict, arm: str, args) -> list[str]:
     plugins = [p.get("name") for p in init.get("plugins") or [] if p.get("path") != "builtin"]
     listed = (init.get("skills") or []) + (init.get("slash_commands") or [])
     has_skill = any(str(s).endswith(args.skill_name) for s in listed)
-    if arm == "baseline":
-        if plugins:
-            problems.append(f"baseline loaded plugins: {plugins}")
+    if arm not in SKILL_ARMS:
+        if args.plugin_name in plugins:
+            problems.append("baseline loaded the plugin under test")
+        elif plugins:
+            # Organisation-managed plugins survive the clean config directory. They are the
+            # same in every arm, so this is reported once in the manifest, not as a problem.
+            pass
         if has_skill:
             problems.append("baseline can see the skill under test")
     else:
@@ -151,6 +162,8 @@ def one_run(args, prompt: dict, arm: str, rep: int) -> dict:
         "setup_problems": check_setup(transcript, arm, args),
         "skill_fired": skill_fired(transcript, args.skill_name),
         "tools_used": [c["name"] for c in transcript["tool_calls"]],
+        "other_plugins": sorted(p.get("name") for p in (transcript["init"] or {}).get("plugins") or []
+                                if p.get("path") != "builtin" and p.get("name") != args.plugin_name),
         "model": (transcript["init"] or {}).get("model"),
         "claude_code_version": (transcript["init"] or {}).get("claude_code_version"),
         "wall_seconds": round(time.time() - started, 1),
@@ -170,7 +183,7 @@ def smoke(args, prompts: list[dict]) -> int:
         print(f"[{arm}] model={meta['model']}  claude={meta['claude_code_version']}  "
               f"{meta['wall_seconds']}s")
         print(f"  tools used: {meta['tools_used'] or 'none'}")
-        if arm != "baseline":
+        if arm in SKILL_ARMS:
             print(f"  skill fired: {meta['skill_fired']}")
         for problem in meta["setup_problems"]:
             print(f"  SETUP PROBLEM: {problem}")
