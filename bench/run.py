@@ -273,7 +273,14 @@ def main() -> int:
         "prompt_ids": [p["id"] for p in prompts],
         "blocked_tools": BLOCKED_TOOLS,
     }
-    (args.out / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+    # A later run into the same folder (another arm, a retry) must not erase the record of
+    # the first one: keep the original manifest and append this invocation to it.
+    manifest_path = args.out / "manifest.json"
+    if manifest_path.exists():
+        first = json.loads(manifest_path.read_text(encoding="utf-8"))
+        first.setdefault("later_invocations", []).append(manifest)
+        manifest = first
+    manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
 
     # Shuffle so the arms are interleaved in time: search results drift during a long run.
     jobs = [(p, arm, rep) for p in prompts for arm in args.arms for rep in range(args.runs)]
