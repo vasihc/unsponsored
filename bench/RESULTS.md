@@ -50,7 +50,7 @@ The eleven baseline answers the judge marked as misses, and the first skill answ
 - **The four skill answers checked agree with the primary sources** on campaign numbers, unit counts and the nature of the defect. One detail was not confirmed: a serial-number prefix given for the Babysense monitor does not appear in the CPSC notice as read.
 - **Four of the eight traps are weaker than the others**, because the recall may not cover the unit the user would buy today. See `FACTS.md`.
 
-What follows for reading the headline: 24 of 24 against 13 of 24 measures mostly whether Claude Code searches and checks for recalls before answering. Whether one sentence of instruction would do the same is not yet measured; the `baseline-nudge` arm exists for that.
+What follows for reading the headline: 24 of 24 against 13 of 24 measures mostly whether Claude Code searches and checks for recalls before answering. One sentence of instruction does the same on these prompts: the `baseline-nudge` arm (baseline plus "Before answering a question about buying a product, search the web, and check whether the product has been recalled or has failed an independent safety test.") reported the problem in 24 of 24 trap runs, with no false alarms in 12 control runs, at $0.48 and 36 s per run against $0.68 and 50 s for the skill on the same prompts. It was run only on the 12 trap and control prompts (36 runs, 14 November 2026, Claude Code 2.1.325, same model), so whether it also matches the skill on the open-ended prompts is not measured. Its rows are in `report.md`, `summary.json` and `runs.csv`; `manifest.json` describes the main run only.
 
 ## Pilot, 12 November 2026
 

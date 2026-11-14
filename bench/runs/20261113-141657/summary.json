@@ -1,13 +1,232 @@
 {
   "arms": [
     "baseline",
+    "baseline-nudge",
     "skill"
   ],
-  "runs_total": 240,
+  "runs_total": 276,
   "runs_failed": 0,
-  "runs_judged": 240,
+  "runs_judged": 276,
   "metrics": {
+    "baseline-nudge": {
+      "searched_web": {
+        "n_prompts": 12,
+        "base": 0.7777777777777778,
+        "other": 1.0,
+        "diff": 0.22222222222222224,
+        "ci_low": 0.0,
+        "ci_high": 0.4722222222222222
+      },
+      "cites_independent": {
+        "n_prompts": 12,
+        "base": 0.5833333333333334,
+        "other": 0.9166666666666666,
+        "diff": 0.3333333333333333,
+        "ci_low": 0.1111111111111111,
+        "ci_high": 0.5833333333333334
+      },
+      "cites_independent_grounded": {
+        "n_prompts": 12,
+        "base": 0.5833333333333334,
+        "other": 0.9166666666666666,
+        "diff": 0.3333333333333333,
+        "ci_low": 0.1111111111111111,
+        "ci_high": 0.5833333333333334
+      },
+      "cites_regulator": {
+        "n_prompts": 12,
+        "base": 0.027777777777777776,
+        "other": 0.6388888888888888,
+        "diff": 0.6111111111111112,
+        "ci_low": 0.3611111111111111,
+        "ci_high": 0.8333333333333334
+      },
+      "cited_share_independent_test": {
+        "n_prompts": 10,
+        "base": 0.42055555555555557,
+        "other": 0.3183333333333333,
+        "diff": -0.10222222222222221,
+        "ci_low": -0.20275132275132274,
+        "ci_high": 0.009920634920634918
+      },
+      "cited_share_regulator": {
+        "n_prompts": 10,
+        "base": 0.006666666666666666,
+        "other": 0.15031746031746032,
+        "diff": 0.14365079365079364,
+        "ci_low": 0.05899470899470899,
+        "ci_high": 0.24814814814814815
+      },
+      "cited_share_editorial_affiliate": {
+        "n_prompts": 10,
+        "base": 0.04555555555555555,
+        "other": 0.047195767195767194,
+        "diff": 0.0016402116402116404,
+        "ci_low": -0.06915343915343915,
+        "ci_high": 0.07767195767195767
+      },
+      "cited_share_retailer": {
+        "n_prompts": 10,
+        "base": 0.15896825396825398,
+        "other": 0.07873015873015873,
+        "diff": -0.08023809523809525,
+        "ci_low": -0.19362433862433862,
+        "ci_high": 0.03026455026455026
+      },
+      "cited_share_manufacturer": {
+        "n_prompts": 10,
+        "base": 0.14388888888888887,
+        "other": 0.09195767195767196,
+        "diff": -0.051931216931216925,
+        "ci_low": -0.1034126984126984,
+        "ci_high": 0.0007407407407407418
+      },
+      "cited_share_ugc": {
+        "n_prompts": 10,
+        "base": 0.030555555555555555,
+        "other": 0.010317460317460317,
+        "diff": -0.020238095238095236,
+        "ci_low": -0.04126984126984127,
+        "ci_high": -0.005555555555555555
+      },
+      "cited_share_news": {
+        "n_prompts": 10,
+        "base": 0.1272222222222222,
+        "other": 0.13394179894179895,
+        "diff": 0.006719576719576724,
+        "ci_low": -0.08142857142857142,
+        "ci_high": 0.07814814814814815
+      },
+      "cited_share_unknown": {
+        "n_prompts": 10,
+        "base": 0.06658730158730158,
+        "other": 0.1692063492063492,
+        "diff": 0.10261904761904762,
+        "ci_low": 0.02354497354497355,
+        "ci_high": 0.19394179894179894
+      },
+      "fetched_share_independent_test": {
+        "n_prompts": 7,
+        "base": 0.6984126984126984,
+        "other": 0.5634920634920635,
+        "diff": -0.13492063492063489,
+        "ci_low": -0.3253968253968254,
+        "ci_high": 0.07936507936507939
+      },
+      "fetched_share_editorial_affiliate": {
+        "n_prompts": 7,
+        "base": 0.07142857142857142,
+        "other": 0.0,
+        "diff": -0.07142857142857142,
+        "ci_low": -0.21428571428571427,
+        "ci_high": 0.0
+      },
+      "evidence_query_rate": {
+        "n_prompts": 10,
+        "base": 0.5494444444444444,
+        "other": 0.8316666666666667,
+        "diff": 0.28222222222222226,
+        "ci_low": 0.18944444444444447,
+        "ci_high": 0.41000000000000003
+      },
+      "n_cited_sites": {
+        "n_prompts": 12,
+        "base": 3.4722222222222223,
+        "other": 5.916666666666667,
+        "diff": 2.4444444444444446,
+        "ci_low": 1.5833333333333333,
+        "ci_high": 3.3055555555555554
+      },
+      "n_searches": {
+        "n_prompts": 12,
+        "base": 2.1666666666666665,
+        "other": 3.638888888888889,
+        "diff": 1.4722222222222223,
+        "ci_low": 1.0833333333333335,
+        "ci_high": 1.9166666666666665
+      },
+      "n_fetches": {
+        "n_prompts": 12,
+        "base": 1.1111111111111112,
+        "other": 1.5555555555555556,
+        "diff": 0.4444444444444445,
+        "ci_low": -0.027777777777777863,
+        "ci_high": 0.888888888888889
+      },
+      "words": {
+        "n_prompts": 12,
+        "base": 355.25,
+        "other": 369.47222222222223,
+        "diff": 14.222222222222223,
+        "ci_low": -10.138888888888895,
+        "ci_high": 41.02777777777778
+      },
+      "cost_usd": {
+        "n_prompts": 12,
+        "base": 0.40958525833333337,
+        "other": 0.48217332500000004,
+        "diff": 0.07258806666666669,
+        "ci_low": 0.04045975000000003,
+        "ci_high": 0.10926623611111112
+      },
+      "duration_s": {
+        "n_prompts": 12,
+        "base": 34.38911111111111,
+        "other": 36.181,
+        "diff": 1.7918888888888889,
+        "ci_low": -2.2965000000000013,
+        "ci_high": 6.679027777777777
+      },
+      "gives_recommendation": {
+        "n_prompts": 12,
+        "base": 1.0,
+        "other": 1.0,
+        "diff": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0
+      },
+      "provenance": {
+        "n_prompts": 12,
+        "base": 1.6944444444444444,
+        "other": 2.0,
+        "diff": 0.3055555555555556,
+        "ci_low": 0.05555555555555556,
+        "ci_high": 0.5833333333333334
+      },
+      "negatives": {
+        "n_prompts": 12,
+        "base": 1.6111111111111112,
+        "other": 2.0,
+        "diff": 0.3888888888888889,
+        "ci_low": 0.16666666666666666,
+        "ci_high": 0.6388888888888888
+      },
+      "flags_gaps": {
+        "n_prompts": 12,
+        "base": 0.9444444444444444,
+        "other": 0.9166666666666666,
+        "diff": -0.02777777777777778,
+        "ci_low": -0.19444444444444448,
+        "ci_high": 0.1388888888888889
+      },
+      "constraint_violation": {
+        "n_prompts": 12,
+        "base": 0.0,
+        "other": 0.0,
+        "diff": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0
+      }
+    },
     "skill": {
+      "searched_web": {
+        "n_prompts": 40,
+        "base": 0.2916666666666667,
+        "other": 0.9916666666666667,
+        "diff": 0.7,
+        "ci_low": 0.5583333333333333,
+        "ci_high": 0.825
+      },
       "cites_independent": {
         "n_prompts": 40,
         "base": 0.225,
@@ -27,10 +246,10 @@
       "cites_regulator": {
         "n_prompts": 40,
         "base": 0.008333333333333333,
-        "other": 0.7083333333333334,
-        "diff": 0.7,
-        "ci_low": 0.575,
-        "ci_high": 0.8166666666666667
+        "other": 0.7166666666666667,
+        "diff": 0.7083333333333334,
+        "ci_low": 0.5916666666666667,
+        "ci_high": 0.825
       },
       "cited_share_independent_test": {
         "n_prompts": 13,
@@ -43,10 +262,10 @@
       "cited_share_regulator": {
         "n_prompts": 13,
         "base": 0.005128205128205128,
-        "other": 0.11538461538461538,
-        "diff": 0.11025641025641025,
+        "other": 0.11823361823361823,
+        "diff": 0.11310541310541311,
         "ci_low": 0.041025641025641026,
-        "ci_high": 0.1923076923076923
+        "ci_high": 0.19757834757834758
       },
       "cited_share_editorial_affiliate": {
         "n_prompts": 13,
@@ -58,11 +277,11 @@
       },
       "cited_share_retailer": {
         "n_prompts": 13,
-        "base": 0.10702075702075702,
+        "base": 0.12869352869352868,
         "other": 0.07357549857549857,
-        "diff": -0.03344525844525845,
-        "ci_low": -0.12213064713064713,
-        "ci_high": 0.05683760683760683
+        "diff": -0.05511803011803012,
+        "ci_low": -0.16664631664631666,
+        "ci_high": 0.04444444444444444
       },
       "cited_share_manufacturer": {
         "n_prompts": 13,
@@ -82,19 +301,19 @@
       },
       "cited_share_news": {
         "n_prompts": 13,
-        "base": 0.09786324786324786,
-        "other": 0.07979242979242979,
-        "diff": -0.01807081807081807,
-        "ci_low": -0.08638583638583638,
-        "ci_high": 0.04072039072039072
+        "base": 0.11923076923076922,
+        "other": 0.09346764346764347,
+        "diff": -0.025763125763125762,
+        "ci_low": -0.09993894993894993,
+        "ci_high": 0.04047619047619048
       },
       "cited_share_unknown": {
         "n_prompts": 13,
-        "base": 0.13699633699633698,
-        "other": 0.08345543345543345,
-        "diff": -0.05354090354090354,
-        "ci_low": -0.15787545787545787,
-        "ci_high": 0.042307692307692296
+        "base": 0.09395604395604396,
+        "other": 0.06693121693121692,
+        "diff": -0.02702482702482702,
+        "ci_low": -0.10293040293040293,
+        "ci_high": 0.0452991452991453
       },
       "fetched_share_independent_test": {
         "n_prompts": 9,
@@ -216,6 +435,10 @@
         "rate": 0.5416666666666666,
         "n": 24
       },
+      "baseline-nudge": {
+        "rate": 1.0,
+        "n": 24
+      },
       "skill": {
         "rate": 1.0,
         "n": 24
@@ -223,6 +446,10 @@
     },
     "Control: good test result reported": {
       "baseline": {
+        "rate": 1.0,
+        "n": 12
+      },
+      "baseline-nudge": {
         "rate": 1.0,
         "n": 12
       },
@@ -236,12 +463,17 @@
         "rate": 0.0,
         "n": 12
       },
+      "baseline-nudge": {
+        "rate": 0.0,
+        "n": 12
+      },
       "skill": {
         "rate": 0.0,
         "n": 12
       }
     }
   },
+  "skill_fired_rate_baseline-nudge": 0.0,
   "skill_fired_rate_skill": 1.0,
   "recommendations": {
     "baseline": {
@@ -249,11 +481,17 @@
       "distinct_brands": 34,
       "top3_brand_share": 0.2545454545454545
     },
+    "baseline-nudge": {
+      "within_arm_agreement": 0.7307692307692307,
+      "distinct_brands": 9,
+      "top3_brand_share": 0.42857142857142855
+    },
     "skill": {
       "within_arm_agreement": 0.5545454545454546,
       "distinct_brands": 37,
       "top3_brand_share": 0.24107142857142858
     },
+    "baseline-nudge_vs_baseline_agreement": 0.5,
     "skill_vs_baseline_agreement": 0.3394495412844037
   }
 }
